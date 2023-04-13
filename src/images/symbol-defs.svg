@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0">
+<symbol id="arrow-left" width="16" height="16" viewBox="0 0 16 16" fill="none">
+<path d="M12.6667 8H3.33334" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.00001 12.6666L3.33334 7.99998L8.00001 3.33331" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="film"  viewBox="0 0 59 59" fill="none">
+<path d="M48.7241 4.9165H10.2758C7.31605 4.9165 4.91667 7.31588 4.91667 10.2757V48.724C4.91667 51.6838 7.31605 54.0831 10.2758 54.0831H48.7241C51.6839 54.0831 54.0833 51.6838 54.0833 48.724V10.2757C54.0833 7.31588 51.6839 4.9165 48.7241 4.9165Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.2083 4.9165V54.0831" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M41.7917 4.9165V54.0831" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.91667 29.5H54.0833" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.91667 17.2085H17.2083" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.91667 41.7915H17.2083" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M41.7917 41.7915H54.0833" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M41.7917 17.2085H54.0833" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="search" width="16" height="16" viewBox="0 0 16 16" fill="none">
+<path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 14.0001L11.1 11.1001" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="close" width="30" height="30" viewBox="0 0 30 30" fill="none">
+<path d="M8 8L22 22" stroke="black" stroke-width="2"/>
+<path d="M8 22L22 8" stroke="black" stroke-width="2"/>
+</symbol>
+
+<symbol id="favorite" width="14" height="13" viewBox="0 0 14 13" fill="none">
+<path d="M7 12.88L6.02 11.9C2.38 8.68 0 6.51 0 3.85C0 1.68 1.68 0 3.85 0C5.04 0 6.23 0.56 7 1.47C7.77 0.56 8.96 0 10.15 0C12.32 0 14 1.68 14 3.85C14 6.51 11.62 8.68 7.98 11.9L7 12.88Z" fill="#B92F2C"/>
+</symbol>
+
+<symbol id="arrow-left (1)" width="16" height="16" viewBox="0 0 16 16" fill="none">
+<path d="M3.33335 8H12.6667" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.00002 12.6666L12.6667 7.99998L8.00002 3.33331" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+</svg>
