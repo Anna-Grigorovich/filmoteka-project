@@ -47,3 +47,15 @@ export class UnsplashAPI {
   }
 
 }
+
+export async function getGenres() {
+  const url = `${MAIN_URL}/genre/movie/list?api_key=${API_KEY}`;
+  return await axios
+    .get(url)
+    .then(response => {
+      return response.data;
+    })
+    .catch(error => console.log(error));
+}
+
+// console.log(getGenres());
