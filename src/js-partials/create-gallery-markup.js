@@ -5,7 +5,7 @@ import { getTrending, getGenres } from './api';
 
 let genresArr;
 
-function getGenresList(arr) {
+export function getGenresList(arr) {
   let results = [];
   arr.forEach(element => {
     const g = genresArr.find(genre => genre.id === element);
