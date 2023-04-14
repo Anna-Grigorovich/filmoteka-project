@@ -13,7 +13,7 @@
 }
 
 .gallery__container {
-  //@extend .container;
+  @extend .container;
 
   list-style: none;
   display: flex;
