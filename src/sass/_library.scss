@@ -1,0 +1,134 @@
+/* My library */
+/* buttons both watched, queue  */
+.watched,
+.queue {
+    display: inline-block;
+    border: none;
+    height: 34px;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(14/12);
+
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width:768px) and (max-width:1279px) {
+
+    .watched,
+    .queue {
+
+        height: 38px;
+        font-size: 12px;
+        line-height: calc(14/12);
+    }
+}
+
+@media screen and (min-width:1280px) {
+
+    .watched,
+    .queue {
+
+        height: 42px;
+        font-size: 12px;
+        line-height: calc(14/12);
+    }
+}
+
+
+/* buttons seperately watched, queue  */
+.watched {
+    min-width: 102px;
+    background: #B92F2C;
+    color: white;
+    box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
+}
+
+.watched:hover,
+.watched:focus {
+    background: white;
+    color: #B92F2C;
+}
+
+.queue {
+    min-width: 86px;
+    background: white;
+    color: #B92F2C;
+    box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
+}
+
+.queue:hover,
+.queue:focus {
+    background: #B92F2C;
+    color: white;
+}
+
+
+@media screen and (min-width:1280px) {
+    .watched {
+        min-width: 120px;
+    }
+
+
+}
+
+/* div library_mobile */
+.movie-libraries {
+    margin-left: 30px;
+    margin-top: 16px;
+}
+
+@media screen and (min-width:767px) and (max-width:1279px) {
+    .movie-libraries {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .movie-libraries {
+        margin: 0;
+    }
+}
+
+.container-header-library {
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (min-width:767px) and (max-width:1279px) {
+    .container-header-library {
+        display: block;
+    }
+}
+
+@media screen and (min-width:767px) and (max-width:1279px) {
+    .nav-library {
+        margin: 0;
+
+    }
+
+    .library-mobile {
+        display: inline-block;
+        margin-left: 480px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .nav-library {
+        margin: 0;
+
+    }
+
+    .library-mobile {
+        margin-left: 940px;
+        margin-top: 0;
+    }
+}
+
+.library-logo{
+    text-decoration: none;
+}
