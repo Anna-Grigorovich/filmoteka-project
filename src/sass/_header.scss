@@ -5,6 +5,7 @@ body {
     font-size: 14px;
     font-weight: 400;
     color: #000000;
+    
 }
 
 .container {
@@ -209,10 +210,16 @@ nav {
 }
 
 /* кнопки-навигации по- отдельности */
-.home {
-    min-width: 87px;
+.home.active,
+.library.active{
     background-color: black;
     color: white;
+}
+.home {
+    min-width: 87px;
+    background-color: white;
+    color: inherit;
+    
 
 }
 
@@ -226,8 +233,8 @@ nav {
 @media screen and (min-width:768px) and (max-width:1279px) {
     .home {
         min-width: 83px;
-        background-color: black;
-        color: white;
+        background-color: white;
+            color: inherit;
 
     }
 
@@ -243,8 +250,8 @@ nav {
     .home {
         padding-top: 12px;
         min-width: 99px;
-        background-color: black;
-        color: white;
+        background-color: white;
+            color: inherit;
 
     }
 
@@ -265,6 +272,7 @@ nav {
     background-color: #FFFFFF;
     margin-top: 8px;
     outline-color: transparent;
+    outline:none;
     border: none;
     padding-left: 14px;
     font-weight: 400;
@@ -338,6 +346,7 @@ nav {
     right: 10px;
     top: 7px;
     background-color: transparent;
+    cursor:pointer;
 
 }
 
