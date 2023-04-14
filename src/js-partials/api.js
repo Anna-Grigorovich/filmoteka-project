@@ -24,6 +24,30 @@ export async function getNameFilm(query) {
     .catch(error => console.log(error));
 }
 
+//функция поиск по имени 2
+export class UnsplashAPI {
+  #BASE_URL = 'https://api.themoviedb.org/3/search/movie';
+  #API_KEY = '4b6315d08086197e79e9ab9df9a28b6a';
+
+  page = 1;
+  q = null;
+
+  async fetchMovies() {
+      try {
+          return await axios.get(`${this.#BASE_URL}`, {
+              params: {
+                  query: this.q,
+                  api_key: this.#API_KEY,
+
+              },
+          });
+      } catch (err) {
+          throw new Error(err.message);
+      }
+  }
+
+}
+
 export async function getGenres() {
   const url = `${MAIN_URL}/genre/movie/list?api_key=${API_KEY}`;
   return await axios
