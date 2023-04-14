@@ -13,4 +13,13 @@ export async function getTrending(page = 1) {
     .catch(error => console.log(error));
 }
 
-// console.log(getTrending());
+//функция поиск по имени
+export async function getNameFilm(query) {
+  const url = `${MAIN_URL}/search/movie?api_key=${API_KEY}&query=${query}&language=en-US&`;
+  return await axios
+    .get(url)
+    .then(response => {
+      return response.data;
+    })
+    .catch(error => console.log(error));
+}
