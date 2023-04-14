@@ -1,4 +1,4 @@
-import noposter from '../images/noposter.jpg';
+import noposter from '../images/no_image_poster.jpg';
 import { genresLibraryFormat } from './genres-format';
 
 export function createLibraryMarkup(movies) {
