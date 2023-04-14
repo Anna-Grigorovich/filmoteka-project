@@ -13,6 +13,12 @@
     align-items: center;
     text-align: center;
     text-transform: uppercase;
+    background: #B92F2C;
+        color: white;
+        box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    
 }
 
 @media screen and (min-width:768px) and (max-width:1279px) {
@@ -41,28 +47,23 @@
 /* buttons seperately watched, queue  */
 .watched {
     min-width: 102px;
-    background: #B92F2C;
-    color: white;
-    box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
+
 }
 
 .watched:hover,
-.watched:focus {
+.queue:hover {
     background: white;
     color: #B92F2C;
 }
 
 .queue {
     min-width: 86px;
-    background: white;
-    color: #B92F2C;
-    box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
+
 }
 
-.queue:hover,
-.queue:focus {
-    background: #B92F2C;
-    color: white;
+.is-active {
+    background: white;
+    color: #B92F2C;
 }
 
 
@@ -130,5 +131,12 @@
 }
 
 .library-logo{
+    text-decoration: none;
+}
+.library-link{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:8px;
     text-decoration: none;
 }
