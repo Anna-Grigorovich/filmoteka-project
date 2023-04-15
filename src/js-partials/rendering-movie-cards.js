@@ -15,5 +15,4 @@ async function genresTranding() {
     createGalleryMarkup(trandingsMovies.results, ganres)
   );
 }
-
 genresTranding();
