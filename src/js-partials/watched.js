@@ -1,4 +1,4 @@
-// import toWatched from './js/add-to-watched'
+// import toWatched from '.js-partials/watched.js'
 
 // Приклад виклику метода '''toWatched.setQueueOne(obj)''' для дій з фільмами моєї бібліотеки в розділі переглянуті.
 
