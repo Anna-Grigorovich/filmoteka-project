@@ -27,7 +27,7 @@ export async function getNameFilm(query) {
 //функция поиск по имени 2
 export class UnsplashAPI {
   #BASE_URL = 'https://api.themoviedb.org/3/search/movie';
-  #API_KEY = '4b6315d08086197e79e9ab9df9a28b6a';
+  #API_KEY = '30b92e886ebe536d021caf51a30c3282';
 
   page = 1;
   q = null;
@@ -38,7 +38,7 @@ export class UnsplashAPI {
               params: {
                   query: this.q,
                   api_key: this.#API_KEY,
-
+                  language: 'en-US&',
               },
           });
       } catch (err) {
