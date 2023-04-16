@@ -1,13 +1,21 @@
 footer {
     width: 100%;
     background-color: #f7f7f7;
+    margin-top: 40px;
 }
+@media screen and (min-width: 768px) {
+    footer {
+        margin-top: 60px;
+    }
+    
+} 
 
 .container-footer {
     width: 100%;
     height: auto;
     padding-top: 28px;
     padding-bottom: 28px;
+   
 
 }
 
