@@ -1,20 +1,20 @@
-// .gallery {
-//   padding-top: 20px;
-//   padding-bottom: 20px;
-//   @media screen and (min-width: 768px) {
-//     padding-top: 59px;
-//     padding-bottom: 40px;
-//   }
-
-//   @media screen and (min-width: 1280px) {
-//     padding-top: 60px;
-//     padding-bottom: 60px;
-//   }
-// }
+.gallery {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 60px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
 
 .gallery__container {
-  @extend .container;
-
+  //@extend .container;
+  padding: 0;
+  margin: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -50,20 +50,18 @@
 .movie__thumb {
   border-radius: 5px;
   overflow: hidden;
-
-  @media (max-width: 767.98px) {
-    width: 280px;
-    height: 398px;
+  max-width: 100%;
+  height: auto;
+    @media (max-width: 767.98px) {
+    //height: 443px;
   }
 
   @media screen and (min-width: 768px) {
-    width: 336px;
-    height: 466px;
+    //height: 466px;
   }
 
   @media screen and (min-width: 1280px) {
-    width: 395px;
-    height: 574px;
+    //height: 574px;
   }
 }
 
@@ -88,21 +86,43 @@
 }
 
 .movie__info {
-  padding: 8px 8px 0;
-
+  padding-top: 10px;
+  @media screen and (min-width: 768px) {
+    padding-top: 8px;
+  }
   @media screen and (min-width: 1280px) {
     padding-top: 12px;
   }
 }
 
 .movie__name {
-  text-transform: uppercase;
-  font-size: 20px;
+  margin: 0;
+  font-family: 'Roboto';
+  font-style: normal;
   font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: #000000;
+  @media screen and (min-width: 768px) {
+    line-height: 1.33;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
 .movie__descr {
-  color: #ff6b08;
-  font-size: 20px;
+  margin: 0;
+  font-family: 'Roboto';
+  font-style: normal;
   font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #b92f2c;
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
