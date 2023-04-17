@@ -10,17 +10,21 @@ const galleryMovie = document.querySelector('.gallery-js');
 async function genresTranding() {
   const trandingsMovies = await getTrending();
   const ganres = await getGenres();
+  const page = trandingsMovies.page;
+  console.log(page);
   galleryMovie.insertAdjacentHTML(
     'beforeend',
     createGalleryMarkup(trandingsMovies.results, ganres)
   );
-  const pagination = createPagination(data.total_results, data.total_pages);
+  const pagination = createPagination(
+    trandingsMovies.total_results,
+    trandingsMovies.total_pages);
   pagination.on('beforeMove', ({ page }) => {
     refs.gallery.innerHTML = '';
-    showHideLoader(refs.loader);
+    // showHideLoader(refs.loader);
     getTrending(page).then(data => {
       // showHideLoader(loader);
-      refs.gallery.innerHTML = createGalleryMarkup(data.results);
+      refs.gallery.innerHTML = createGalleryMarkup(data.results, ganres);
       
     });
   });
