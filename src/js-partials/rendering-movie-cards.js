@@ -18,16 +18,17 @@ async function genresTranding() {
   );
   const pagination = createPagination(
     trandingsMovies.total_results,
+
     trandingsMovies.total_pages);
+
+  );
   pagination.on('beforeMove', ({ page }) => {
     refs.gallery.innerHTML = '';
     // showHideLoader(refs.loader);
     getTrending(page).then(data => {
       // showHideLoader(loader);
       refs.gallery.innerHTML = createGalleryMarkup(data.results, ganres);
-      
     });
   });
-        
 }
 genresTranding();

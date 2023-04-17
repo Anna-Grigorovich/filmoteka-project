@@ -1,7 +1,7 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 
-import { getNameFilm, getTrending } from './api'
+import { getNameFilm, getTrending } from './api';
 const TUI_VISIBLE_PAGES = 5;
 const paginationEl = document.querySelector('#pagination');
 

@@ -33,19 +33,18 @@ export class UnsplashAPI {
   q = null;
 
   async fetchMovies() {
-      try {
-          return await axios.get(`${this.#BASE_URL}`, {
-              params: {
-                  query: this.q,
-                  api_key: this.#API_KEY,
-                  language: 'en-US&',
-              },
-          });
-      } catch (err) {
-          throw new Error(err.message);
-      }
+    try {
+      return await axios.get(`${this.#BASE_URL}`, {
+        params: {
+          query: this.q,
+          api_key: this.#API_KEY,
+          language: 'en-US&',
+        },
+      });
+    } catch (err) {
+      throw new Error(err.message);
+    }
   }
-
 }
 
 export async function getGenres() {
