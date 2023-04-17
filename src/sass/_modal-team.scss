@@ -1,9 +1,12 @@
-// .is-hidden {
-//     opacity: 0;
-//     visibility: hidden;
-//     pointer-events: none;
-// }
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
 
+.no-scroll {
+    overflow: hidden;
+}
 
 .backdrop {
     position: fixed;
@@ -49,6 +52,7 @@
     top: 8px;
     border: none;
     fill: #000;
+    cursor: pointer;
 
     &:focus,
     &:hover {
