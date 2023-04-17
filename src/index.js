@@ -2,3 +2,4 @@
 import './js-partials/loader';
 import * as renderingMovieCard from './js-partials/rendering-movie-cards';
 import './js-partials/handle-search-form';
+import './js-partials/open-and-close-modal';
