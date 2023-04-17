@@ -18,7 +18,9 @@ async function genresTranding() {
   );
   const pagination = createPagination(
     trandingsMovies.total_results,
-    trandingsMovies.total_pages
+
+    trandingsMovies.total_pages);
+
   );
   pagination.on('beforeMove', ({ page }) => {
     refs.gallery.innerHTML = '';
