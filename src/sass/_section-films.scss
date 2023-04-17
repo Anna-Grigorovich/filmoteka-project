@@ -1,20 +1,20 @@
 .gallery {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
   @media screen and (min-width: 768px) {
-    padding-top: 59px;
-    padding-bottom: 40px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding-top: 60px;
+    padding-top: 32px;
     padding-bottom: 60px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 
 .gallery__container {
   //@extend .container;
-
+  padding: 0;
+  margin: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -24,12 +24,105 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 32px;
-    
   }
 
   @media screen and (min-width: 1280px) {
     column-gap: 16px;
     row-gap: 32px;
-    
+  }
+}
+
+.movie__card {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(200, 200, 200, 0.8);
+  transition: box-shadow 250ms linear;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 32px) / 2);
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: calc((100% - 2 * 16px) / 3);
+  }
+}
+
+.movie__thumb {
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+    @media (max-width: 767.98px) {
+    //height: 443px;
+  }
+
+  @media screen and (min-width: 768px) {
+    //height: 466px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    //height: 574px;
+  }
+}
+
+.movie__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 250ms linear;
+
+  @media screen and (min-width: 768px) {
+    .movie__card:hover &,
+    .movie__card:focus & {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.movie__card:focus,
+.movie__card:hover {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.movie__info {
+  padding-top: 10px;
+  @media screen and (min-width: 768px) {
+    padding-top: 8px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 12px;
+  }
+}
+
+.movie__name {
+  margin: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: #000000;
+  @media screen and (min-width: 768px) {
+    line-height: 1.33;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+.movie__descr {
+  margin: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #b92f2c;
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+    line-height: 1.2;
   }
 }

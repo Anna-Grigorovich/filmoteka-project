@@ -13,4 +13,48 @@ export async function getTrending(page = 1) {
     .catch(error => console.log(error));
 }
 
-// console.log(getTrending());
+//функция поиск по имени
+export async function getNameFilm(query) {
+  const url = `${MAIN_URL}/search/movie?api_key=${API_KEY}&query=${query}&language=en-US&`;
+  return await axios
+    .get(url)
+    .then(response => {
+      return response.data;
+    })
+    .catch(error => console.log(error));
+}
+
+//функция поиск по имени 2
+export class UnsplashAPI {
+  #BASE_URL = 'https://api.themoviedb.org/3/search/movie';
+  #API_KEY = '30b92e886ebe536d021caf51a30c3282';
+
+  page = 1;
+  q = null;
+
+  async fetchMovies() {
+    try {
+      return await axios.get(`${this.#BASE_URL}`, {
+        params: {
+          query: this.q,
+          api_key: this.#API_KEY,
+          language: 'en-US&',
+        },
+      });
+    } catch (err) {
+      throw new Error(err.message);
+    }
+  }
+}
+
+export async function getGenres() {
+  const url = `${MAIN_URL}/genre/movie/list?api_key=${API_KEY}`;
+  return await axios
+    .get(url)
+    .then(response => {
+      return response.data;
+    })
+    .catch(error => console.log(error));
+}
+
+// console.log(getGenres());
