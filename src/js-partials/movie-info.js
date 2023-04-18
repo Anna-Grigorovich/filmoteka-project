@@ -77,6 +77,11 @@ function createMovieInfo(movie) {
             add to queue
           </button>
         </li>
+        <li>
+          <button type="button" class="modal__btn" id = 'trailer_button'">
+            Trailer
+          </button>
+        </li>
       </ul>
     </div>`;
 }
