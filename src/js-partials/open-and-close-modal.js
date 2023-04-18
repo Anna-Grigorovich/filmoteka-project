@@ -1,6 +1,6 @@
 import refs from './refs';
 import { movieInfo } from './movie-info';
-import { addLocal } from './local';
+import { addLocal, getLocalStoradge } from './local';
 
 (() => {
   const refs = {
@@ -30,12 +30,13 @@ import { addLocal } from './local';
 })();
 
 // для модалки с фильмами
+// const galleryLib = document.querySelector('#gallery-lib');
 const modal = document.querySelector('[data-modal]');
 refs.gallery.addEventListener('click', onOpenModal);
 refs.closeModalBtn.addEventListener('click', onCloseModal);
 refs.divBackdrop.addEventListener('click', onBackDropClick);
 
-async function onOpenModal(event) {
+export async function onOpenModal(event) {
   const getParentalEl = event.target.closest('.movie__card');
   if (!getParentalEl) {
     return;
@@ -52,18 +53,18 @@ async function onOpenModal(event) {
   document.body.classList.add('show-modal-film');
   window.addEventListener('keydown', onEscKeyPress);
 }
-function onCloseModal() {
+export function onCloseModal() {
   document.body.classList.remove('show-modal-film');
 
   refs.modalRef.innerHTML = '';
   refs.teamRef.innerHTML = '';
 }
-function onBackDropClick(event) {
+export function onBackDropClick(event) {
   if (event.currentTarget === event.target) {
     onCloseModal();
   }
 }
-function onEscKeyPress(event) {
+export function onEscKeyPress(event) {
   if (event.code !== 'Escape') {
     return;
   }
