@@ -106,7 +106,7 @@ body.show-modal-film {
     }
 
     @media screen and (min-width: 1280px) {
-      min-width: 320px;
+      min-width: 375px;
       min-height: 478px;
       margin-right: 16px;
     }
@@ -118,6 +118,9 @@ body.show-modal-film {
     font-weight: 500;
     font-size: 20px;
     line-height: calc(23 / 20);
+    @media screen and (min-width:768px) {
+      margin-top: 0;
+    }
 
     @media screen and (min-width: 1280px) {
       font-size: 30px;
@@ -129,6 +132,7 @@ body.show-modal-film {
     margin-bottom: 20px;
     display: flex;
     gap: 40px;
+    
 
     @media screen and (min-width: 1280px) {
       gap: 83px;
@@ -140,6 +144,9 @@ body.show-modal-film {
     font-size: 12px;
     line-height: 16px;
     color: #8c8c8c;
+    list-style-type: none;
+    padding: 0;
+    margin:0;
   }
 
   &__list-item:not(:last-child) {
@@ -154,11 +161,13 @@ body.show-modal-film {
     font-size: 12px;
     line-height: calc(14 / 12);
     color: #000000;
+    list-style-type: none;
+    padding:0;
   }
 
   &__list-vote {
     padding: 1px 9px;
-    background: #ff6b01;
+    background-color: #B92F2C;
     border-radius: 5px;
 
     color: #ffffff;
@@ -194,26 +203,30 @@ body.show-modal-film {
     overflow: auto;
 
     @media screen and (min-width: 768px) and (max-width: 1279px) {
-      margin-bottom: 36px;
+      margin-bottom: 20px;
     }
   }
 
   &__btn-list {
     display: flex;
-    gap: 20px;
-
+    flex-wrap:wrap;
+    
+    gap: 4px;
+    list-style-type: none;
+    padding:0;
     @media screen and (min-width: 768px) {
       gap: 15px;
+      flex-direction:row;
     }
 
     @media screen and (min-width: 1280px) {
-      margin-left: 24px;
+     gap:8px;
     }
   }
 
   &__btn {
-    width: 110px;
-    height: 40px;
+    width: 118px;
+    height: 34px;
 
     font-weight: 500;
     font-size: 12px;
@@ -224,7 +237,7 @@ body.show-modal-film {
     justify-content: center;
     text-transform: uppercase;
 
-    border-radius: 5px;
+    border-radius: 100px;
     border: 1px solid #000000;
     background-color: transparent;
     cursor: pointer;
@@ -235,17 +248,17 @@ body.show-modal-film {
     &:hover,
     &:focus {
       color: #ffffff;
-      background-color: #ff6b01;
+      background-color:#B92F2C;
       border: none;
     }
 
     @media screen and (min-width: 768px) {
-      width: 125px;
-      height: 44px;
+      width: 124px;
+      height: 38px;
     }
 
     @media screen and (min-width: 1280px) {
-      width: 136px;
+      width: 165px;
       height: 44px;
     }
   }
