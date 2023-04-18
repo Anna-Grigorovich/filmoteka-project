@@ -1,5 +1,6 @@
 import refs from './refs';
 import { movieInfo } from './movie-info';
+import { addLocal } from './local';
 
 (() => {
   const refs = {
@@ -34,15 +35,19 @@ refs.gallery.addEventListener('click', onOpenModal);
 refs.closeModalBtn.addEventListener('click', onCloseModal);
 refs.divBackdrop.addEventListener('click', onBackDropClick);
 
-function onOpenModal(event) {
+async function onOpenModal(event) {
   const getParentalEl = event.target.closest('.movie__card');
   if (!getParentalEl) {
     return;
   }
 
   const movieId = getParentalEl.dataset.movie;
-  movieInfo(movieId);
-  console.log(movieId);
+  await movieInfo(movieId);
+  const watchedBtn = document.querySelector('#addToWatched');
+  watchedBtn.addEventListener('click', handleClickWatched);
+
+  const addToQueueBtn = document.querySelector('#addToQueue');
+  addToQueueBtn.addEventListener('click', handleClickQueue);
 
   document.body.classList.add('show-modal-film');
   window.addEventListener('keydown', onEscKeyPress);
@@ -65,4 +70,15 @@ function onEscKeyPress(event) {
 
   window.removeEventListener('keydown', onEscKeyPress);
   onCloseModal();
+}
+
+//  для localStorage
+function handleClickWatched(e) {
+  const movieId = e.target.getAttribute('data-btn');
+  addLocal('watched', movieId);
+}
+
+function handleClickQueue(e) {
+  const movieId = e.target.getAttribute('data-btn');
+  addLocal('queue', movieId);
 }

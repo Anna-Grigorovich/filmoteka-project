@@ -39,7 +39,6 @@ export class UnsplashAPI {
           query: this.q,
           page: this.page,
           api_key: this.#API_KEY,
-          
         },
       });
     } catch (err) {
@@ -69,6 +68,7 @@ export async function getInfoMovie(movie_id) {
     })
     .catch(error => console.log(error));
 }
+
 // export async function getVideos(movie_id) {
 //   const url = `${MAIN_URL}/movie/${movie_id}/videos?api_key=${API_KEY}&language=en-US`;
 //   return await axios

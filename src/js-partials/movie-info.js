@@ -7,6 +7,7 @@ export async function movieInfo(id) {
   const movie = await getInfoMovie(id);
   const markup = createMovieInfo(movie);
   modalEl.innerHTML = markup;
+  console.log(movie);
 }
 
 function createMovieInfo(movie) {
@@ -68,17 +69,21 @@ function createMovieInfo(movie) {
        
       <ul class="modal__btn-list list">
         <li>
-          <button type="button" class="modal__btn" data-btn="addToWatched">
+          <button type="button" class="modal__btn" data-btn="${
+            movie.id
+          }" id="addToWatched">
             add to Watched
           </button>
         </li>
         <li>
-          <button type="button" class="modal__btn" data-btn="addToQueue">
+          <button type="button" class="modal__btn" data-btn="${
+            movie.id
+          }" id="addToQueue">
             add to queue
           </button>
         </li>
         <li>
-          <button type="button" class="modal__btn" id = 'trailer_button'">
+          <button type="button" class="modal__btn" id ='trailer_button' ">
             Trailer
           </button>
         </li>
