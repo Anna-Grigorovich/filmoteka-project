@@ -16,8 +16,8 @@
     }
 
     .tui-is-selected {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         display: inline-flex;
         background-color: #B92F2C;
         color: white;
@@ -26,16 +26,21 @@
         justify-content: center;
         text-align: center;
         vertical-align: middle;
+        @media screen and (min-width: 768px) {
+            width: 40px;
+            height: 40px;
+        }
 
         &:hover {
             background-color: #B92F2C;
         }
 
     }
-
+    
     .tui-ico-first,
     .tui-ico-last {
         margin-top: 8px;
+        
     }
 
     .tui-ico-first {
@@ -62,13 +67,18 @@
 
     .tui-prev,
     .tui-next {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
 
         background-color: #f7f7f7;
         border-radius: 5px;
         position: relative;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        @media screen and (min-width: 768px) {
+                width: 40px;
+                height: 40px;
+            }
 
         &:hover {
             color: white;
