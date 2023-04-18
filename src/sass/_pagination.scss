@@ -1,0 +1,109 @@
+#pagination {
+    flex-shrink: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+
+   .tui-page-btn {
+        border: none;
+        font-size: 12px;
+        line-height: 1.33;
+        font-weight: 500;
+        color: #000;
+
+        &:hover {
+            background-color: #F7F7F7;
+        }
+    }
+
+    .tui-is-selected {
+        width: 30px;
+        height: 30px;
+        display: inline-flex;
+        background-color: #B92F2C;
+        color: white;
+        border-radius: 5px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        vertical-align: middle;
+        @media screen and (min-width: 768px) {
+            width: 40px;
+            height: 40px;
+        }
+
+        &:hover {
+            background-color: #B92F2C;
+        }
+
+    }
+    
+    .tui-ico-first,
+    .tui-ico-last {
+        margin-top: 8px;
+        
+    }
+
+    .tui-ico-first {
+        @media (min-width: 768px) {
+            margin-right: 10px;
+        }
+    }
+
+    .tui-ico-last {
+        @media (min-width: 768px) {
+            margin-left: 10px;
+        }
+    }
+
+    .tui-prev {
+        margin-right: 10px;
+
+    }
+
+    .tui-next {
+        margin-left: 10px;
+
+    }
+
+    .tui-prev,
+    .tui-next {
+        width: 30px;
+        height: 30px;
+
+        background-color: #f7f7f7;
+        border-radius: 5px;
+        position: relative;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        @media screen and (min-width: 768px) {
+                width: 40px;
+                height: 40px;
+            }
+
+        &:hover {
+            color: white;
+            background-color: #d4d4d4;
+        }
+
+    }
+
+    .tui-ico-next,
+    .tui-ico-prev {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-position: center;
+        fill:#000;
+    }
+
+    .tui-ico-prev {
+        background-image: url("../images/arrow-left.svg");
+    }
+
+    .tui-ico-next {
+        background-image: url("../images/arrow-right.svg");
+    }
+}
