@@ -78,7 +78,7 @@ body.show-modal-film {
     padding-left: 36px;
     width: 704px;
 
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
   }
@@ -87,7 +87,7 @@ body.show-modal-film {
     min-width: 806px;
     padding-left: 12px;
     padding-right: 12px;
-    top: 62%;
+    
   }
 
   &__wrap {
@@ -130,7 +130,7 @@ body.show-modal-film {
   }
 
   &__list-box {
-    margin-bottom: 20px;
+    
     display: flex;
     gap: 40px;
     
@@ -215,6 +215,7 @@ body.show-modal-film {
     gap: 4px;
     list-style-type: none;
     padding:0;
+    margin: 0;
     @media screen and (min-width: 768px) {
       gap: 15px;
       flex-direction:row;
