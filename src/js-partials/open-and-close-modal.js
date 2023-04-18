@@ -27,8 +27,9 @@ import { movieInfo } from './movie-info';
   refs.modal.addEventListener('click', backdropCloseModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 })();
-const modal = document.querySelector('[data-modal]');
 
+// для модалки с фильмами
+const modal = document.querySelector('[data-modal]');
 refs.gallery.addEventListener('click', onOpenModal);
 refs.closeModalBtn.addEventListener('click', onCloseModal);
 refs.divBackdrop.addEventListener('click', onBackDropClick);
@@ -43,11 +44,11 @@ function onOpenModal(event) {
   movieInfo(movieId);
   console.log(movieId);
 
-  document.body.classList.add('show-modal');
+  document.body.classList.add('show-modal-film');
   window.addEventListener('keydown', onEscKeyPress);
 }
 function onCloseModal() {
-  document.body.classList.remove('show-modal');
+  document.body.classList.remove('show-modal-film');
 
   refs.modalRef.innerHTML = '';
   refs.teamRef.innerHTML = '';

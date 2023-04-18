@@ -20,7 +20,7 @@
   pointer-events: none;
 }
 
-body.show-modal .backdrop {
+body.show-modal-film .backdrop {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
@@ -29,7 +29,7 @@ body.show-modal .backdrop {
   //     visibility duration timing-function;
 }
 
-body.show-modal {
+body.show-modal-film {
   overflow-y: hidden;
 }
 
@@ -269,7 +269,7 @@ body.show-modal {
   }
 }
 
-body.show-modal .modal {
+body.show-modal-film .modal {
   opacity: 1;
   visibility: visible;
 
