@@ -1,18 +1,36 @@
+img {
+  display: block;
+  // max-width: 100%;
+  height: auto;
+}
+
 .gallery {
   padding-top: 20px;
   padding-bottom: 40px;
   padding-left: 20px;
   padding-right: 20px;
+  width: 320px;
+    margin: 0 auto;
   @media screen and (min-width: 768px) {
     padding-top: 32px;
     padding-bottom: 60px;
     padding-left: 32px;
     padding-right: 32px;
+    width:768px;
+    margin:0 auto;
   }
+
+    @media screen and (min-width: 1280px) {
+      padding-top: 32px;
+      padding-bottom: 60px;
+      padding-left: 32px;
+      padding-right: 32px;
+      width: 1280px;
+      margin: 0 auto;
+    }
 }
 
 .gallery__container {
-  //@extend .container;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -24,12 +42,18 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 32px;
+    width:704px;
+    
   }
+     @media screen and (min-width: 1280px) {
+       flex-direction: row;
+       flex-wrap: wrap;
+       gap: 16px;
+       width: 1216px;
+  
+     }
 
-  @media screen and (min-width: 1280px) {
-    column-gap: 16px;
-    row-gap: 32px;
-  }
+  
 }
 
 .movie__card {
@@ -39,29 +63,32 @@
   transition: box-shadow 250ms linear;
 
   @media screen and (min-width: 768px) {
-    width: calc((100% - 32px) / 2);
+    width: calc((704px - 32px) / 2);
   }
 
   @media screen and (min-width: 1280px) {
-    width: calc((100% - 2 * 16px) / 3);
+    width: calc((1216px - 2 * 16px) / 3);
   }
 }
 
 .movie__thumb {
   border-radius: 5px;
   overflow: hidden;
-  max-width: 100%;
-  height: auto;
-    @media (max-width: 767.98px) {
-    //height: 443px;
+ //width: 100%;
+  //height: auto;
+  @media (max-width: 767.98px) {
+    width: 280px;
+    height: 398px;
   }
 
   @media screen and (min-width: 768px) {
-    //height: 466px;
+    width: 336px;
+    height: 466px;
   }
 
   @media screen and (min-width: 1280px) {
-    //height: 574px;
+    width: 395px;
+    height: 574px;
   }
 }
 

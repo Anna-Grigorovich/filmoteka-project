@@ -1,32 +1,25 @@
-<div class="modal__backdrop">
-  <div class="modal__container">
-    <button type="button" class="modal__close">
-      <svg class="modal__svg">
-        <use href="./images/icon.svg"></use>
+<div class="backdrop js-backdrop" data-modal>
+  <div class="modal">
+    <button type="button" class="modal__btn-close">
+      <svg
+        class="modal__icon__close"
+        width="30"
+        height="30"
+        viewbox="0 0 30 30"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M8 8L22 22" stroke="black" stroke-width="2" />
+        <path d="M8 22L22 8" stroke="black" stroke-width="2" />
       </svg>
     </button>
 
-    <div class="modal__content">
-      <div class="modal__img-container">
-        <img src="#" alt="film-poster" class="modal__img" />
-      </div>
-      <div>
-        <h2 class="modal__title--film"></h2>
-        <ul class="modal__film--info">
-          <li class="modal__item--info"></li>
-          <li class="modal__item--info"></li>
-          <li class="modal__item--info"></li>
-          <li class="modal__item--info"></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="modal__about">ABOUT</h3>
-        <p class="modal__text"></p>
-      </div>
-      <div>
-        <button type="button" class="modal__btn">add to Watched</button>
-        <button type="button" class="modal__btn">add to queue</button>
-      </div>
+    <div class="modal__wrap">
+      <!-- Film info  -->
     </div>
+    <ul class="team__wrap">
+      <!-- Team info  -->
+    </ul>
+    <span class="loader modal__loader"></span>
   </div>
 </div>
