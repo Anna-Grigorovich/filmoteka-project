@@ -78,3 +78,16 @@ export async function getInfoMovie(movie_id) {
 //     })
 //     .catch(error => {});
 // }
+export async function getArrayofMovies(array) {
+  const arrayOfMovies = array.map(async movie_id => {
+    return await axios
+      .get(`${MAIN_URL}/movie/${movie_id}?api_key=${API_KEY}&language=en-US`)
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => console.log(error));
+  });
+
+  const resultData = await Promise.all(arrayOfMovies);
+  return resultData;
+}

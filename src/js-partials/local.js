@@ -14,14 +14,10 @@ function addLocal(key, value) {
   return;
 }
 
-// function getLocalOne(id) {
-//   if (localStorage.getItem(KEY)) {
-//     const arr = JSON.parse(localStorage.getItem(KEY));
-//     return arr.filter(e => e.id === id);
-//   }
-//   return undefined;
-// }
-
+export function getLocalStoradge(key) {
+  return JSON.parse(localStorage.getItem(key));
+}
+// console.log(getLocalStoradge('watched'));
 export { addLocal, getLocalOne };
 
 function chekId(key, value) {
