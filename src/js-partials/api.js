@@ -29,16 +29,17 @@ export class UnsplashAPI {
   #BASE_URL = 'https://api.themoviedb.org/3/search/movie';
   #API_KEY = '30b92e886ebe536d021caf51a30c3282';
 
-  page = 1;
+  // page = 1;
   q = null;
 
-  async fetchMovies() {
+  async fetchMovies(query, page) {
     try {
       return await axios.get(`${this.#BASE_URL}`, {
         params: {
           query: this.q,
+          page: this.page,
           api_key: this.#API_KEY,
-          language: 'en-US&',
+          
         },
       });
     } catch (err) {
@@ -58,6 +59,7 @@ export async function getGenres() {
 }
 
 // console.log(getGenres());
+
 export async function getInfoMovie(movie_id) {
   const url = `${MAIN_URL}/movie/${movie_id}?api_key=${API_KEY}&language=en-US`;
   return await axios
