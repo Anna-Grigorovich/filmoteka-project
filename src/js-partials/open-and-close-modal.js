@@ -84,12 +84,12 @@ function handleClickWatched(e) {
   const addWatchedRef = document.querySelector('#addToWatched');
   const movieId = e.target.getAttribute('data-btn');
   if (arrId.includes(movieId)) {
-    addWatchedRef.textContent = 'Add to watched';
+    addWatchedRef.textContent = 'Is in watched';
     addWatchedRef.style.backgroundColor = '#B92F2C';
     addWatchedRef.style.color = '#ffffff';
     addLocal('watched', movieId);
   } else {
-    addWatchedRef.textContent = 'Is in watched';
+    addWatchedRef.textContent = 'Add to watched ';
     addWatchedRef.style.backgroundColor = '#B92F2C';
     addWatchedRef.style.color = '#ffffff';
     addLocal('watched', movieId);
@@ -102,12 +102,12 @@ function handleClickQueue(e) {
   const movieId = e.target.getAttribute('data-btn');
 
   if (arrId.includes(movieId)) {
-    addQueueRef.textContent = 'Add to queue';
+    addQueueRef.textContent = 'Is in queue';
     addQueueRef.style.backgroundColor = '#B92F2C';
     addQueueRef.style.color = '#ffffff';
     addLocal('queue', movieId);
   } else {
-    addQueueRef.textContent = 'Is in queue';
+    addQueueRef.textContent = 'Add to queue ';
     addQueueRef.style.backgroundColor = '#B92F2C';
     addQueueRef.style.color = '#ffffff';
     addLocal('queue', movieId);
