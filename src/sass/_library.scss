@@ -56,6 +56,11 @@
     color: #B92F2C;
 }
 
+.watched:focus,
+.queue:focus {
+    background: white;
+    color: #B92F2C;
+}
 .queue {
     min-width: 86px;
 
