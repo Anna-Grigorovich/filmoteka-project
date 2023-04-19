@@ -1,6 +1,3 @@
-//addLocal(arr) додає і перезаписує , приймає масив обєктів
-//getLocalOne(id) віддає масив з 1 елемента , потрібно передати id елемента
-
 function addLocal(key, value) {
   const check = chekId(key, value);
   if (!check.present) {
@@ -28,7 +25,7 @@ function chekId(key, value) {
   }
 
   const pre = arr.find(item => item === value);
-  console.log(pre);
+  // console.log(pre);
 
   return { present: arr.find(item => item === value), arr };
 }

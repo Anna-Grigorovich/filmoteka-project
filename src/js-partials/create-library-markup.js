@@ -14,7 +14,6 @@ async function handleLibraryClick(e) {
   const idArr = getLocalStoradge('watched');
   const movieData = await getArrayofMovies(idArr);
   const markup = createLibraryMarkup(movieData);
-  // galleryLib.innerHTML = markup;
 
   galleryLib.insertAdjacentHTML('beforeend', markup);
 }
@@ -25,7 +24,6 @@ async function handleQueueClick(e) {
   const idArr = getLocalStoradge('queue');
   const movieData = await getArrayofMovies(idArr);
   const markup = createLibraryMarkup(movieData);
-  // galleryLib.innerHTML = markup;
 
   galleryLib.insertAdjacentHTML('beforeend', markup);
 }

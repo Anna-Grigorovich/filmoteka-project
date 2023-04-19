@@ -7,7 +7,6 @@ export async function movieInfo(id) {
   const movie = await getInfoMovie(id);
   const markup = createMovieInfo(movie);
   modalEl.innerHTML = markup;
-  console.log(movie);
 }
 
 function createMovieInfo(movie) {
@@ -15,7 +14,6 @@ function createMovieInfo(movie) {
   const genresName = [];
   genres.map(genre => genresName.push(genre.name));
   const genresStr = genresName.join(' ');
-  console.log(genresStr);
   const poster = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
   return `<img
       class="modal__img"

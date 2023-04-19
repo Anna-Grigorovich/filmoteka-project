@@ -4,6 +4,5 @@ const refs = {
   closeModalBtn: document.querySelector('.modal__btn-close'),
   divBackdrop: document.querySelector('.js-backdrop'),
 };
-console.log(refs.library);
 
 export default refs;
