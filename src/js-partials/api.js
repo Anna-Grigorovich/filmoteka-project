@@ -77,6 +77,7 @@ export async function getVideos(movie_id) {
       return response.data.videos;
     })
     .catch(error => {});
+}
 
 // export async function getVideos(movie_id) {
 //   const url = `${MAIN_URL}/movie/${movie_id}/videos?api_key=${API_KEY}&language=en-US`;
