@@ -1,5 +1,8 @@
 import refs from './refs';
 import { movieInfo } from './movie-info';
+import { addLocal } from './local';
+import { onTrailerBtnClick } from './trailer';
+
 import { addLocal, getLocalStoradge } from './local';
 
 (() => {
@@ -48,6 +51,9 @@ export async function onOpenModal(event) {
 
   const addToQueueBtn = document.querySelector('#addToQueue');
   addToQueueBtn.addEventListener('click', handleClickQueue);
+  
+  const buttonTrailer = document.querySelector('#trailer_button');
+  buttonTrailer.addEventListener("click", handleClickTrailer);
 
   document.body.classList.add('show-modal-film');
   window.addEventListener('keydown', onEscKeyPress);
@@ -106,4 +112,11 @@ function handleClickQueue(e) {
     addQueueRef.style.color = '#ffffff';
     addLocal('queue', movieId);
   }
+}
+
+function handleClickTrailer(e) {
+  e.preventDefault()
+  const movieId = e.target.getAttribute('data-btn');
+  console.log(movieId);
+  onTrailerBtnClick(movieId)
 }

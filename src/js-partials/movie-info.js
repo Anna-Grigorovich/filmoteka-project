@@ -81,7 +81,9 @@ function createMovieInfo(movie) {
           </button>
         </li>
         <li>
-          <button type="button" class="modal__btn" id ='trailer_button' ">
+          <button type="button" class="modal__btn" id ='trailer_button' data-btn="${
+            movie.id
+          }">
             Trailer
           </button>
         </li>
