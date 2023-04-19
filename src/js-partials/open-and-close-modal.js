@@ -80,7 +80,7 @@ export function onEscKeyPress(event) {
 
 //  для localStorage
 function handleClickWatched(e) {
-  const arrId = getLocalStoradge('watched');
+  const arrId = getLocalStoradge('watched') || '';
   const addWatchedRef = document.querySelector('#addToWatched');
   const movieId = e.target.getAttribute('data-btn');
   if (arrId.includes(movieId)) {
@@ -97,7 +97,7 @@ function handleClickWatched(e) {
 }
 
 function handleClickQueue(e) {
-  const arrId = getLocalStoradge('queue');
+  const arrId = getLocalStoradge('queue') || '';
   const addQueueRef = document.querySelector('#addToQueue');
   const movieId = e.target.getAttribute('data-btn');
 
