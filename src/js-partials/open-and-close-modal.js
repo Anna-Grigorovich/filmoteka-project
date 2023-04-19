@@ -51,9 +51,9 @@ export async function onOpenModal(event) {
 
   const addToQueueBtn = document.querySelector('#addToQueue');
   addToQueueBtn.addEventListener('click', handleClickQueue);
-  
+
   const buttonTrailer = document.querySelector('#trailer_button');
-  buttonTrailer.addEventListener("click", handleClickTrailer);
+  buttonTrailer.addEventListener('click', handleClickTrailer);
 
   document.body.classList.add('show-modal-film');
   window.addEventListener('keydown', onEscKeyPress);
@@ -115,8 +115,8 @@ function handleClickQueue(e) {
 }
 
 function handleClickTrailer(e) {
-  e.preventDefault()
+  e.preventDefault();
   const movieId = e.target.getAttribute('data-btn');
   console.log(movieId);
-  onTrailerBtnClick(movieId)
+  onTrailerBtnClick(movieId);
 }
