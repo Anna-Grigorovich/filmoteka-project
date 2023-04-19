@@ -69,12 +69,12 @@ export async function getInfoMovie(movie_id) {
     .catch(error => console.log(error));
 }
 
-// export async function getVideos(movie_id) {
-//   const url = `${MAIN_URL}/movie/${movie_id}/videos?api_key=${API_KEY}&language=en-US`;
-//   return await axios
-//     .get(url)
-//     .then(response => {
-//       return response.data.results;
-//     })
-//     .catch(error => {});
-// }
+export async function getVideos(movie_id) {
+  const url = `${MAIN_URL}/movie/${movie_id}?api_key=${API_KEY}&append_to_response=videos`;
+  return await axios
+    .get(url)
+    .then(response => {
+      return response.data.videos;
+    })
+    .catch(error => {});
+}
