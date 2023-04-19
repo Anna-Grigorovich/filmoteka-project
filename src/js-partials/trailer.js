@@ -1,3 +1,4 @@
+const basicLightbox = require('basiclightbox')
 import * as basicLightbox from 'basiclightbox';
 import { getVideos } from './api';
 
@@ -15,5 +16,7 @@ export async function onTrailerBtnClick(id) {
 
       instance.show();
     })
-    .catch(error => {});
+    .catch(error => {
+      instance.close()
+    });
 }
