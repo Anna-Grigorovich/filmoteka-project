@@ -1,40 +1,9 @@
 import refs from './refs';
 import { movieInfo } from './movie-info';
-import { addLocal } from './local';
-import { onTrailerBtnClick } from './trailer';
-
 import { addLocal, getLocalStoradge } from './local';
 
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector('[data-modal-team-open]'),
-    closeModalBtn: document.querySelector('[data-modal-team-close]'),
-    modal: document.querySelector('[data-modal-team]'),
-    body: document.querySelector('body'),
-  };
-
-  const toggleModal = event => {
-    event.preventDefault();
-
-    refs.modal.classList.toggle('is-hidden');
-    refs.body.classList.toggle('no-scroll');
-  };
-
-  const backdropCloseModal = event => {
-    if (event.target === refs.modal) {
-      refs.modal.classList.add('is-hidden');
-      refs.body.classList.remove('no-scroll');
-    }
-  };
-
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.modal.addEventListener('click', backdropCloseModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-})();
-
-// для модалки с фильмами
 const modal = document.querySelector('[data-modal]');
-refs.gallery.addEventListener('click', onOpenModal);
+refs.library.addEventListener('click', onOpenModal);
 refs.closeModalBtn.addEventListener('click', onCloseModal);
 refs.divBackdrop.addEventListener('click', onBackDropClick);
 
@@ -51,9 +20,6 @@ export async function onOpenModal(event) {
 
   const addToQueueBtn = document.querySelector('#addToQueue');
   addToQueueBtn.addEventListener('click', handleClickQueue);
-  
-  const buttonTrailer = document.querySelector('#trailer_button');
-  buttonTrailer.addEventListener("click", handleClickTrailer);
 
   document.body.classList.add('show-modal-film');
   window.addEventListener('keydown', onEscKeyPress);
@@ -112,11 +78,4 @@ function handleClickQueue(e) {
     addQueueRef.style.color = '#ffffff';
     addLocal('queue', movieId);
   }
-}
-
-function handleClickTrailer(e) {
-  e.preventDefault()
-  const movieId = e.target.getAttribute('data-btn');
-  console.log(movieId);
-  onTrailerBtnClick(movieId)
 }

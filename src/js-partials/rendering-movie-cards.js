@@ -13,11 +13,10 @@ async function genresTranding() {
   const trandingsMovies = await getTrending();
   const ganres = await getGenres();
   const page = trandingsMovies.page;
-  console.log(page);
+  // console.log(page);
   galleryMovie.insertAdjacentHTML(
     'beforeend',
     createGalleryMarkup(trandingsMovies.results, ganres)
-    
   );
   showHideLoader(loader);
   const pagination = createPagination(
@@ -28,9 +27,9 @@ async function genresTranding() {
     refs.gallery.innerHTML = '';
     showHideLoader(loader);
     getTrending(page).then(data => {
-      // 
+      //
       refs.gallery.innerHTML = createGalleryMarkup(data.results, ganres);
-    showHideLoader(loader);
+      showHideLoader(loader);
     });
   });
 }
