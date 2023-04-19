@@ -46,11 +46,36 @@ export function onEscKeyPress(event) {
 
 //  для localStorage
 function handleClickWatched(e) {
+  const arrId = getLocalStoradge('watched');
+  const addWatchedRef = document.querySelector('#addToWatched');
   const movieId = e.target.getAttribute('data-btn');
-  addLocal('watched', movieId);
+  if (arrId.includes(movieId)) {
+    addWatchedRef.textContent = 'Add to watched';
+    addWatchedRef.style.backgroundColor = '#B92F2C';
+    addWatchedRef.style.color = '#ffffff';
+    addLocal('watched', movieId);
+  } else {
+    addWatchedRef.textContent = 'Is in watched';
+    addWatchedRef.style.backgroundColor = '#B92F2C';
+    addWatchedRef.style.color = '#ffffff';
+    addLocal('watched', movieId);
+  }
 }
 
 function handleClickQueue(e) {
+  const arrId = getLocalStoradge('queue');
+  const addQueueRef = document.querySelector('#addToQueue');
   const movieId = e.target.getAttribute('data-btn');
-  addLocal('queue', movieId);
+
+  if (arrId.includes(movieId)) {
+    addQueueRef.textContent = 'Add to queue';
+    addQueueRef.style.backgroundColor = '#B92F2C';
+    addQueueRef.style.color = '#ffffff';
+    addLocal('queue', movieId);
+  } else {
+    addQueueRef.textContent = 'Is in queue';
+    addQueueRef.style.backgroundColor = '#B92F2C';
+    addQueueRef.style.color = '#ffffff';
+    addLocal('queue', movieId);
+  }
 }
