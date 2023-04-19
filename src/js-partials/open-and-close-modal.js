@@ -61,8 +61,8 @@ export async function onOpenModal(event) {
 export function onCloseModal() {
   document.body.classList.remove('show-modal-film');
 
-  refs.modalRef.innerHTML = '';
-  refs.teamRef.innerHTML = '';
+  // refs.modalRef.innerHTML = '';
+  // refs.teamRef.innerHTML = '';
 }
 export function onBackDropClick(event) {
   if (event.currentTarget === event.target) {
